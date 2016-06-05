@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TempSwitch</string>
+    <string name="txvType">Temp. Type : </string>
+    <string name="rbtnC">\u2103</string>
+    <string name="rbtnF">\u2109</string>
+    <string name="edt">Type the Temp.</string>
+    <string name="txvC">\u2103</string>
+    <string name="txvF">\u2109</string>
+</resources>
