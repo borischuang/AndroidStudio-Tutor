@@ -34,14 +34,19 @@ public class tempswitch extends AppCompatActivity
         TextView txvC = (TextView)findViewById(R.id.txvC);
         TextView txvF = (TextView)findViewById(R.id.txvF);
 
-        double f, c;
-        if(rbtnGroup.getCheckedRadioButtonId() == R.id.rbtnC){
-            f = Double.parseDouble(edt.getText().toString());
-            c = (f-32)*5/9;
-        }
-        else{
-            c = Double.parseDouble(edt.getText().toString());
-            f = c*9/5+32;
+        double f=0, c=0;
+        String value = edt.getText().toString();
+        if(rbtnGroup.getCheckedRadioButtonId() == R.id.rbtnC) {
+
+            if (!value.isEmpty()) {
+                f = Double.parseDouble(value);
+                c = (f - 32) * 5 / 9;
+            }
+        }else {
+            if (!value.isEmpty()) {
+                c = Double.parseDouble(edt.getText().toString());
+                f = c * 9 / 5 + 32;
+            }
         }
 
         txvC.setText(String.format("%.1f", c) + getResources().getString(R.string.txvC)) ;
